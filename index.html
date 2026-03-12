@@ -31,13 +31,13 @@
             font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.8;
+            line-height: 2.0; /* 行間を広く */
             -webkit-font-smoothing: antialiased;
         }
 
         /* --- Hero Section --- */
         .hero {
-            height: 50vh;
+            height: 40vh; /* 高さを少し低く */
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
                         url('https://images.unsplash.com/photo-1513519245088-0e12902e35ca?auto=format&fit=crop&w=1200&q=80'); 
             background-size: cover;
@@ -45,71 +45,47 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 20px;
-        }
-
-        .hero-inner h1 {
-            font-size: 2.2rem;
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            margin-bottom: 8px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .hero-inner p {
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-        }
-
-        .badge {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 4px 12px;
-            border: 1px solid var(--white);
-            font-size: 0.75rem;
-            text-transform: uppercase;
         }
 
         /* --- Container --- */
         .container {
             max-width: 500px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px; /* 上下paddingを増やす */
         }
 
         section {
-            margin-bottom: 50px;
+            margin-bottom: 70px; /* marginを増やす */
             text-align: center;
         }
 
         h2 {
-            font-size: 1.4rem;
+            font-size: 1.6rem; /* サイズを少し調整 */
             font-weight: 500;
-            margin-bottom: 30px;
+            margin-bottom: 40px; /* marginを増やす */
             color: var(--primary-color);
             letter-spacing: 0.1em;
         }
 
         /* --- Concept --- */
         .concept p {
-            font-size: 0.95rem;
+            font-size: 1.0rem; /* サイズを少し大きく */
             color: var(--text-color);
             text-align: justify;
             text-align-last: center;
+            line-height: 2.2; /* 行間を広く */
         }
 
         /* --- Brand Section (RAKUTEN / YAHOO) --- */
         .brand-section {
             text-align: left;
-            margin-bottom: 60px;
+            margin-bottom: 80px; /* marginを増やす */
         }
 
         .brand-header {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* marginを増やす */
         }
 
         .brand-square {
@@ -131,14 +107,14 @@
         .brand-content {
             display: flex;
             justify-content: space-between;
-            align-items: stretch; /* 左の文章と右のボタンの高さを揃える */
-            margin-bottom: 25px;
-            gap: 15px;
+            align-items: flex-start; /* 揃え方を変更 */
+            margin-bottom: 30px; /* marginを増やす */
+            gap: 20px; /* gapを広げる */
         }
 
         .brand-desc {
-            font-size: 0.85rem;
-            line-height: 1.6;
+            font-size: 0.9rem; /* サイズを少し調整 */
+            line-height: 1.8; /* 行間を広く */
             font-weight: 500;
             color: #000;
             margin: 0;
@@ -149,16 +125,17 @@
             background-color: var(--primary-color);
             color: var(--white);
             text-decoration: none;
-            padding: 0 25px; /* 上下のpaddingをなくし、Flexboxで中央配置 */
+            padding: 15px 30px; /* paddingを調整 */
             font-size: 1.1rem;
             letter-spacing: 0.25em;
-            text-indent: 0.25em; /* 文字間隔のズレ調整 */
+            text-indent: 0.25em; 
             font-weight: 400;
             transition: opacity 0.3s ease;
             white-space: nowrap;
             display: flex;
-            align-items: center; /* 文字を高さの中央に配置 */
+            align-items: center; 
             justify-content: center;
+            margin-top: 5px; /* 文章とのバランス調整 */
         }
 
         .btn-shop:hover {
@@ -167,7 +144,7 @@
 
         /* --- Coupon Image --- */
         .coupon-image-wrap {
-            margin-bottom: 25px;
+            margin-bottom: 30px; /* marginを増やす */
             width: 100%;
         }
 
@@ -180,7 +157,7 @@
         /* --- Product Grid --- */
         .product-grid {
             display: flex;
-            gap: 15px;
+            gap: 20px; /* gapを広げる */
             justify-content: space-between;
         }
 
@@ -202,7 +179,7 @@
         .sns-group {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px; /* gapを広げる */
         }
 
         .sns-link {
@@ -211,10 +188,10 @@
             align-items: center;
             text-decoration: none;
             color: var(--primary-color);
-            font-size: 0.8rem;
+            font-size: 0.9rem; /* サイズを少し大きく */
             font-weight: 500;
             transition: opacity 0.3s;
-            gap: 8px;
+            gap: 10px; /* gapを広げる */
         }
 
         .sns-link:hover {
@@ -222,37 +199,35 @@
         }
 
         .sns-icon {
-            width: 28px;
-            height: 28px;
+            width: 32px; /* サイズを少し大きく */
+            height: 32px;
             fill: currentColor;
         }
 
         /* --- Footer --- */
         footer {
-            padding: 40px 20px;
+            padding: 50px 20px; /* paddingを増やす */
             text-align: center;
-            font-size: 0.7rem;
+            font-size: 0.8rem; /* サイズを少し大きく */
             color: var(--gray);
             letter-spacing: 0.05em;
+        }
+        footer p {
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <div class="hero-inner">
-            <h1>Lykke & Hygge</h1>
-            <p>暮らしに、小さな幸せと心地よい時間を。</p>
-            <div class="badge">Event Visitor Guide</div>
-        </div>
-    </header>
+        </header>
 
     <main class="container">
         <section class="concept">
             <h2>Concept</h2>
             <p>
                 イベントでの素敵な出会いに感謝いたします。<br>
-                Lykke & Hygge（リッケ＆ヒュッゲ）は、<br>
+                Lykke &amp; Hygge（リッケ＆ヒュッゲ）は、<br>
                 北欧の豊かな暮らしの知恵を、<br>
                 日本の日常に溶け込む形でお届けします。
             </p>
@@ -277,11 +252,11 @@
                 </div>
 
                 <div class="coupon-image-wrap">
-                    <img src="https://placehold.co/800x250/a92b49/ffffff?text=Coupon+Image" alt="20% OFF クーポン">
+                    <img src="https://cdn.shopify.com/s/files/1/0796/1162/5687/files/coupon_430x.png" alt="20% OFF クーポン">
                 </div>
 
                 <div class="product-grid">
-                    <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像1"></div>
+                    <div class="product-item"><img src="https://cdn.shopify.com/s/files/1/0796/1162/5687/files/3431e-1_430x.png" alt="BRIDダクトレールファン"></div>
                     <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像2"></div>
                     <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像3"></div>
                 </div>
@@ -299,11 +274,11 @@
                         5のつく日や超PayPay祭などイベントも充実<br>
                         しておりポイントをたくさん GET！
                     </p>
-                    <a href="#" class="btn-shop">SHOP</a>
+                    <a href="https://store.shopping.yahoo.co.jp/lykke-hygge/" class="btn-shop">SHOP</a>
                 </div>
 
                 <div class="coupon-image-wrap">
-                    <img src="https://placehold.co/800x250/a92b49/ffffff?text=Coupon+Image" alt="20% OFF クーポン">
+                    <img src="https://cdn.shopify.com/s/files/1/0796/1162/5687/files/coupon_430x.png" alt="20% OFF クーポン">
                 </div>
 
                 <div class="product-grid">
@@ -318,15 +293,15 @@
         <section class="sns">
             <h2>Connect</h2>
             <div class="sns-group">
-                <a href="https://www.instagram.com/lykke_hygge_shop/" class="sns-link" target="_blank">
-                    <svg class="sns-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <a href="https://www.instagram.com/lykke.hygge_/" class="sns-link" target="_blank">
+                    <svg class="sns-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
                     </svg>
                     Instagram
                 </a>
-                <a href="#" class="sns-link" target="_blank">
-                    <svg class="sns-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                <a href="https://www.youtube.com/@LykkeHygge-yl8xh" class="sns-link" target="_blank">
+                    <svg class="sns-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
                     </svg>
                     YouTube
                 </a>
@@ -335,7 +310,7 @@
     </main>
 
     <footer>
-        <p>&copy; Lykke & Hygge. All Rights Reserved.</p>
+        <p>© Lykke &amp; Hygge. All Rights Reserved.</p>
     </footer>
 
 </body>
