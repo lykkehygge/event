@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lykke Hygge</title>
+    <title>Special Guide | Lykke & Hygge</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,25 +100,26 @@
             text-align-last: center;
         }
 
-        /* --- New Shop Section (Rakuten Design) --- */
-        .rakuten-section {
+        /* --- Brand Section (RAKUTEN / YAHOO) --- */
+        .brand-section {
             text-align: left;
+            margin-bottom: 60px;
         }
 
-        .rakuten-header {
+        .brand-header {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
         }
 
-        .rakuten-square {
+        .brand-square {
             width: 18px;
             height: 18px;
             background-color: var(--primary-color);
             margin-right: 12px;
         }
 
-        .rakuten-header h3 {
+        .brand-header h3 {
             font-size: 2.8rem;
             font-weight: 500;
             letter-spacing: 0.05em;
@@ -127,151 +128,53 @@
             line-height: 1;
         }
 
-        .rakuten-content {
+        .brand-content {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: stretch; /* 左の文章と右のボタンの高さを揃える */
             margin-bottom: 25px;
+            gap: 15px;
         }
 
-        .rakuten-desc {
+        .brand-desc {
             font-size: 0.85rem;
             line-height: 1.6;
             font-weight: 500;
             color: #000;
             margin: 0;
+            flex: 1;
         }
 
         .btn-shop {
             background-color: var(--primary-color);
             color: var(--white);
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 0 25px; /* 上下のpaddingをなくし、Flexboxで中央配置 */
             font-size: 1.1rem;
             letter-spacing: 0.25em;
             text-indent: 0.25em; /* 文字間隔のズレ調整 */
             font-weight: 400;
             transition: opacity 0.3s ease;
             white-space: nowrap;
+            display: flex;
+            align-items: center; /* 文字を高さの中央に配置 */
+            justify-content: center;
         }
 
         .btn-shop:hover {
             opacity: 0.8;
         }
 
-        /* --- Coupon Banner --- */
-        .coupon-wrap {
-            border: 1px solid #000;
-            background-color: #a92b49; /* クーポンの赤色 */
-            color: var(--white);
-            display: flex;
-            align-items: stretch;
+        /* --- Coupon Image --- */
+        .coupon-image-wrap {
             margin-bottom: 25px;
+            width: 100%;
         }
 
-        .coupon-left {
-            padding: 10px 8px;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-weight: 500;
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .coupon-divider {
-            width: 1px;
-            background-color: #fff;
-            margin: 10px 0;
-        }
-
-        .coupon-center {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 0;
-        }
-
-        .coupon-20off {
-            display: flex;
-            align-items: center;
-            line-height: 1;
-        }
-
-        .coupon-20 {
-            font-size: 4.5rem;
-            font-weight: 700;
-            letter-spacing: -0.05em;
-        }
-
-        .coupon-off-wrap {
-            display: flex;
-            flex-direction: column;
-            margin-left: 5px;
-            margin-top: 5px;
-        }
-
-        .coupon-percent {
-            font-size: 1.6rem;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 2px;
-        }
-
-        .coupon-off {
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            line-height: 1;
-        }
-
-        .coupon-word {
-            font-size: 0.8rem;
-            letter-spacing: 0.4em;
-            text-indent: 0.4em;
-            font-weight: 700;
-            margin-top: 5px;
-        }
-
-        .coupon-right {
-            padding: 10px 15px 10px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .coupon-tomorrow {
-            font-size: 1.2rem;
-            font-weight: 700;
-            transform: rotate(-10deg);
-            margin-bottom: -5px;
-            margin-left: 10px;
-        }
-
-        .coupon-limit {
-            display: flex;
-            align-items: center;
-        }
-
-        .coupon-2 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 0.8;
-            margin-right: 5px;
-            color: #6e1b2f; /* 背景より濃い赤 */
-        }
-
-        .coupon-days {
-            font-size: 0.75rem;
-            font-weight: 700;
-            display: flex;
-            flex-direction: column;
-            line-height: 1.4;
+        .coupon-image-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* --- Product Grid --- */
@@ -299,15 +202,29 @@
         .sns-group {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
         }
 
         .sns-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-decoration: none;
-            color: var(--text-color);
-            font-size: 0.85rem;
-            border-bottom: 1px solid var(--gray);
-            padding-bottom: 2px;
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            gap: 8px;
+        }
+
+        .sns-link:hover {
+            opacity: 0.7;
+        }
+
+        .sns-icon {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
         }
 
         /* --- Footer --- */
@@ -342,16 +259,16 @@
         </section>
 
         <section class="shopping">
-            <h2>Guide</h2>
+            <h2>Shop</h2>
             
-            <div class="rakuten-section">
-                <div class="rakuten-header">
-                    <span class="rakuten-square"></span>
+            <div class="brand-section">
+                <div class="brand-header">
+                    <span class="brand-square"></span>
                     <h3>RAKUTEN</h3>
                 </div>
                 
-                <div class="rakuten-content">
-                    <p class="rakuten-desc">
+                <div class="brand-content">
+                    <p class="brand-desc">
                         楽天ポイントを貯めたい方はこちら。<br>
                         毎月0と5のつく日やお買い物マラソンなど<br>
                         イベントも充実しておりポイントをたくさん GET！
@@ -359,52 +276,60 @@
                     <a href="https://www.rakuten.co.jp/lykke-hygge/" class="btn-shop">SHOP</a>
                 </div>
 
-                <div class="coupon-wrap">
-                    <div class="coupon-left">
-                        対象商品に使える
-                    </div>
-                    <div class="coupon-divider"></div>
-                    <div class="coupon-center">
-                        <div class="coupon-20off">
-                            <span class="coupon-20">20</span>
-                            <div class="coupon-off-wrap">
-                                <span class="coupon-percent">%</span>
-                                <span class="coupon-off">OFF</span>
-                            </div>
-                        </div>
-                        <div class="coupon-word">- C O U P O N -</div>
-                    </div>
-                    <div class="coupon-right">
-                        <div class="coupon-tomorrow">明日まで</div>
-                        <div class="coupon-limit">
-                            <span class="coupon-2">2</span>
-                            <div class="coupon-days">
-                                <span>日間限定</span>
-                                <span>~3/16 23:59</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="coupon-image-wrap">
+                    <img src="https://placehold.co/800x250/a92b49/ffffff?text=Coupon+Image" alt="20% OFF クーポン">
                 </div>
 
                 <div class="product-grid">
-                    <div class="product-item">
-                        <img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像1">
-                    </div>
-                    <div class="product-item">
-                        <img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像2">
-                    </div>
-                    <div class="product-item">
-                        <img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像3">
-                    </div>
+                    <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像1"></div>
+                    <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像2"></div>
+                    <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像3"></div>
                 </div>
             </div>
+
+            <div class="brand-section">
+                <div class="brand-header">
+                    <span class="brand-square"></span>
+                    <h3>YAHOO</h3>
+                </div>
+                
+                <div class="brand-content">
+                    <p class="brand-desc">
+                        PayPayポイントを貯めたい方はこちら。<br>
+                        5のつく日や超PayPay祭などイベントも充実<br>
+                        しておりポイントをたくさん GET！
+                    </p>
+                    <a href="#" class="btn-shop">SHOP</a>
+                </div>
+
+                <div class="coupon-image-wrap">
+                    <img src="https://placehold.co/800x250/a92b49/ffffff?text=Coupon+Image" alt="20% OFF クーポン">
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像1"></div>
+                    <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像2"></div>
+                    <div class="product-item"><img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像3"></div>
+                </div>
+            </div>
+
         </section>
 
         <section class="sns">
             <h2>Connect</h2>
             <div class="sns-group">
-                <a href="https://www.instagram.com/lykke_hygge_shop/" class="sns-link" target="_blank">Instagram</a>
-                <a href="#" class="sns-link">LINE Official</a>
+                <a href="https://www.instagram.com/lykke_hygge_shop/" class="sns-link" target="_blank">
+                    <svg class="sns-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    Instagram
+                </a>
+                <a href="#" class="sns-link" target="_blank">
+                    <svg class="sns-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    YouTube
+                </a>
             </div>
         </section>
     </main>
