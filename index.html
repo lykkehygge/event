@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
 
     <style>
         /* --- CSS Variables --- */
@@ -87,7 +87,7 @@
         h2 {
             font-size: 1.4rem;
             font-weight: 500;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: var(--primary-color);
             letter-spacing: 0.1em;
         }
@@ -100,53 +100,199 @@
             text-align-last: center;
         }
 
-        /* --- Shop Cards --- */
-        .shop-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(125, 142, 127, 0.1);
-            transition: transform 0.3s ease;
+        /* --- New Shop Section (Rakuten Design) --- */
+        .rakuten-section {
+            text-align: left;
         }
 
-        .shop-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .benefit-tag {
-            background-color: #f0f2f0;
-            color: var(--primary-color);
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 500;
+        .rakuten-header {
+            display: flex;
+            align-items: center;
             margin-bottom: 15px;
         }
 
-        .shop-desc {
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-            color: #666;
+        .rakuten-square {
+            width: 18px;
+            height: 18px;
+            background-color: var(--primary-color);
+            margin-right: 12px;
         }
 
-        .btn {
-            display: block;
+        .rakuten-header h3 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: #000;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .rakuten-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 25px;
+        }
+
+        .rakuten-desc {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            font-weight: 500;
+            color: #000;
+            margin: 0;
+        }
+
+        .btn-shop {
             background-color: var(--primary-color);
             color: var(--white);
             text-decoration: none;
-            padding: 14px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            letter-spacing: 0.25em;
+            text-indent: 0.25em; /* 文字間隔のズレ調整 */
+            font-weight: 400;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
         }
 
-        .btn:active {
-            transform: scale(0.98);
-            background-color: #6a7a6c;
+        .btn-shop:hover {
+            opacity: 0.8;
+        }
+
+        /* --- Coupon Banner --- */
+        .coupon-wrap {
+            border: 1px solid #000;
+            background-color: #a92b49; /* クーポンの赤色 */
+            color: var(--white);
+            display: flex;
+            align-items: stretch;
+            margin-bottom: 25px;
+        }
+
+        .coupon-left {
+            padding: 10px 8px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coupon-divider {
+            width: 1px;
+            background-color: #fff;
+            margin: 10px 0;
+        }
+
+        .coupon-center {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .coupon-20off {
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .coupon-20 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+        }
+
+        .coupon-off-wrap {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        .coupon-percent {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+
+        .coupon-off {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+
+        .coupon-word {
+            font-size: 0.8rem;
+            letter-spacing: 0.4em;
+            text-indent: 0.4em;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .coupon-right {
+            padding: 10px 15px 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .coupon-tomorrow {
+            font-size: 1.2rem;
+            font-weight: 700;
+            transform: rotate(-10deg);
+            margin-bottom: -5px;
+            margin-left: 10px;
+        }
+
+        .coupon-limit {
+            display: flex;
+            align-items: center;
+        }
+
+        .coupon-2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 0.8;
+            margin-right: 5px;
+            color: #6e1b2f; /* 背景より濃い赤 */
+        }
+
+        .coupon-days {
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.4;
+        }
+
+        /* --- Product Grid --- */
+        .product-grid {
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            flex: 1;
+            aspect-ratio: 1 / 1;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         /* --- SNS Links --- */
@@ -198,25 +344,59 @@
         <section class="shopping">
             <h2>Guide</h2>
             
-            <div class="shop-card">
-                <h3>楽天市場店</h3>
-                <div class="benefit-tag">毎月5と0の日はポイント4倍</div>
-                <p class="shop-desc">楽天ポイントを貯めたい方はこちら。<br>お買い物マラソン等のイベントも充実。</p>
-                <a href="https://www.rakuten.co.jp/lykke-hygge/" class="btn">楽天市場店を見る</a>
-            </div>
+            <div class="rakuten-section">
+                <div class="rakuten-header">
+                    <span class="rakuten-square"></span>
+                    <h3>RAKUTEN</h3>
+                </div>
+                
+                <div class="rakuten-content">
+                    <p class="rakuten-desc">
+                        楽天ポイントを貯めたい方はこちら。<br>
+                        毎月0と5のつく日やお買い物マラソンなど<br>
+                        イベントも充実しておりポイントをたくさん GET！
+                    </p>
+                    <a href="https://www.rakuten.co.jp/lykke-hygge/" class="btn-shop">SHOP</a>
+                </div>
 
-            <div class="shop-card">
-                <h3>Official Online Store</h3>
-                <div class="benefit-tag">新規会員登録で500円OFF</div>
-                <p class="shop-desc">限定アイテムの先行販売や、<br>ブランドのフルラインナップを展開。</p>
-                <a href="#" class="btn">公式ストアを見る</a>
-            </div>
+                <div class="coupon-wrap">
+                    <div class="coupon-left">
+                        対象商品に使える
+                    </div>
+                    <div class="coupon-divider"></div>
+                    <div class="coupon-center">
+                        <div class="coupon-20off">
+                            <span class="coupon-20">20</span>
+                            <div class="coupon-off-wrap">
+                                <span class="coupon-percent">%</span>
+                                <span class="coupon-off">OFF</span>
+                            </div>
+                        </div>
+                        <div class="coupon-word">- C O U P O N -</div>
+                    </div>
+                    <div class="coupon-right">
+                        <div class="coupon-tomorrow">明日まで</div>
+                        <div class="coupon-limit">
+                            <span class="coupon-2">2</span>
+                            <div class="coupon-days">
+                                <span>日間限定</span>
+                                <span>~3/16 23:59</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="shop-card">
-                <h3>Yahoo!ショッピング店</h3>
-                <div class="benefit-tag">PayPayポイント還元率UP</div>
-                <p class="shop-desc">ソフトバンク・ワイモバイルユーザー、<br>PayPay利用の方におすすめ。</p>
-                <a href="#" class="btn">Yahoo!店を見る</a>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像1">
+                    </div>
+                    <div class="product-item">
+                        <img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像2">
+                    </div>
+                    <div class="product-item">
+                        <img src="https://placehold.co/300x300/eef2f5/999?text=Image" alt="商品画像3">
+                    </div>
+                </div>
             </div>
         </section>
 
